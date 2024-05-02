@@ -8,17 +8,22 @@ const userSchema = new mongoose.Schema({
     type: String,
     unique:true,
   },
+  password:{
+    type: String,
+    required: true
+  },
   // role:{
   //   type:Number,
   //   required:0,
   // },
-  cart:{
-    type:Array,
-    default:[]
-  },
+  // cart:{
+  //   type:Array,
+  //   default:[]
+  // },
 
 
-},{
+},
+{
   timestamps:true
 })
 module.exports= mongoose.model('Users', userSchema)
